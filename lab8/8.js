@@ -45,7 +45,7 @@ function dil (obj) {
 	const n = obj.num.value
 	let s = 'Дільники заданого натурального числа' + '\n'
 	for (let i = 1; i <= n / 2; i++) {
-		if ((n % i) == 0) s += i + '\n'
+		if (n % i == 0) s += i + '\n'
 	}
 	s += n
 	obj.data.value = s

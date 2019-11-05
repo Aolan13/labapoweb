@@ -21,7 +21,7 @@
   "homepage": "https://labaweb-9d938.firebaseapp.com",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint -- --fix && npx prettier script.js --write"
+      "pre-commit": "npm run lint -- --fix && npx prettier lab8/8.js --write"
     }
   },
   "devDependencies": {

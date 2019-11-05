@@ -21,7 +21,7 @@
   "homepage": "https://labaweb-9d938.firebaseapp.com",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run lint -- --fix"
     }
   },
   "devDependencies": {

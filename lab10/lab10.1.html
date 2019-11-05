@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>Вивід символів рядка в стовпчик</TITLE>
+    <script language="JavaScript">
+        function ttest(s){
+            return s
+                .replace(/\s\s+/g, ' ')
+                .split(' ')
+                .map(item => Number(item) || item)
+                .filter(item => item === String(item) && item)
+                .length;
+        }
+
+    </script>
+</HEAD>
+<BODY bgcolor="#AAAAAA">
+<h4>Вивід символів рядка в стовпчик</h4>
+<FORM name="form1">
+    Введіть рядок: <input type="text" size=30 name="st1"><hr>
+    <input type="button" value="Bикoнати"
+           onClick="form1.res.value=ttest(form1.st1.value)">
+    <input type="reset" value=Скасувати><hr>
+    <textarea cols=60 rows=20 name= res></textarea>
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,25 @@
+<HTML>   
+        <HEAD>   
+            <meta charset="utf-8">   
+            <TITLE>JS lab4.1</TITLE>
+            <script>   
+                function chan(obj)
+                {      
+                    var r1=Number(obj.a1.value)     
+                    var r2=4     
+                    document.images[r2-1].src = document.images[r1-1].src;
+                }  
+            </script>   
+        </HEAD>
+        <BODY bgcolor="#AAAAAA">  
+                <p>Галерея малюнків</p>   
+                <IMG src="pch1.jpg" width="200" height="200" name="pic1" alt="pic1">
+                <IMG src="pch2.jpg" width="200" height="200" name="pic2" alt="pic2">
+                <IMG src="pch3.jpg" width="200" height="200" name="pic3" alt="pic3"> <br>
+                <IMG src="pch4.jpg" width="200" height="200" name="pic4" alt=""> <br>
+                <FORM name=form1>   Зображення:<br>   
+                        <input type="text" name="a1" size=1>  
+                        <input type="button" value="Вибір" onClick="chan(form1)">   
+                </FORM>    
+        </BODY>  
+</HTML> 

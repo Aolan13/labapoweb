@@ -1,0 +1,58 @@
+<HTML>   
+<HEAD>    
+    <meta charset="utf-8"> 
+    <TITLE>Частина №1</TITLE>
+    <script>   
+function transformmore()
+{
+    var Width=parseInt(getComputedStyle(line).width);
+    var Height=parseInt(getComputedStyle(line).height);
+    document.getElementById("line").style.width=(Width+10)+"px";
+    document.getElementById("line").style.height=(Height+10)+"px";
+}
+
+function transformless()
+{
+    var Width=parseInt(getComputedStyle(line).width);
+    var Height=parseInt(getComputedStyle(line).height);
+    document.getElementById("line").style.width=(Width-10)+"px";
+    document.getElementById("line").style.height=(Height-10)+"px";
+}
+
+function right()
+{
+    var right=parseInt(getComputedStyle(line).marginRight);
+    document.getElementById("line").style.marginRight=(right+10)+"px";
+}
+
+function left()
+{
+    var left=parseInt(getComputedStyle(line).marginRight);
+    document.getElementById("line").style.marginRight=(left-10)+"px";
+}
+
+function bottom()
+{
+    var bottom = parseInt(getComputedStyle(line).marginTop);
+	document.getElementById("line").style.marginTop = (bottom + 10) + "px";
+}
+
+function top1()
+{
+    var top1 = parseInt(getComputedStyle(line).marginTop);
+	document.getElementById("line").style.marginTop = (top1 - 10) + "px";
+}
+    </script>   
+</HEAD>   
+<BODY bgcolor="#AAAAAA">  
+<h3>
+    <button  onclick="transformmore();">Збільшити лінію</button><br><br>
+    <button  onclick="transformless();">Зменшити лінію</button><br/><br>
+    <button  onclick="right();">Вправо</button><br><br>
+    <button  onclick="left();">Вліво</button><br/><br>
+    <button  onclick="bottom();">Вниз</button><br><br>
+    <button  onclick="top1();">Вгору</button><br/><br><br>
+<hr id="line">
+</h3>
+</BODY>   
+</HTML> 

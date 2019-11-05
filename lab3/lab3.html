@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8">
+<TITLE> JS lab3</TITLE>
+<script language="JavaScript">
+function NumOfMaxVal (obj){
+
+var num = 0;
+var max = Math.max(obj.num1.value, obj.num2.value, obj.num3.value, obj.num4.value, obj.num5.value);
+
+if(max == obj.num1.value) num++;
+if(max == obj.num2.value) num++;
+if(max == obj.num3.value) num++;
+if(max == obj.num4.value) num++;
+if(max == obj.num5.value) num++;
+
+obj.res.value = num;
+}
+</script>
+<script language="JavaScript">
+function triangle(obj1){
+	var a = Number(obj1.side1.value);
+	var b = Number(obj1.side2.value);
+	var c = Number(obj1.side3.value);
+	if ((a + b > c) && (a + c > b) && (b + c > a)) 
+		obj1.res1.value = "можливо";
+	else 
+		obj1.res1.value = "неможливо";
+}
+function belonging(obj2){
+	var a = Number(obj2.x.value);
+	var b = Number(obj2.y.value);
+	if (a > 0 && b > 0)
+		obj2.res2.value = "Першій чверті"
+	if (a < 0 && b > 0)
+		obj2.res2.value = "Другій чверті"
+	if (a > 0 && b < 0)
+		obj2.res2.value = "Четвертій чверті"
+	if (a < 0 && b < 0)
+		obj2.res2.value = "Третій чверті"
+}
+</script>
+</HEAD>
+<BODY bgcolor="#AAAAAA">
+<p> Обчислення максимального значення</p>
+<FORM name="form1">
+Число 1: <input type="text" size=5 name="num1"><br>
+Число 2: <input type="text" size=5 name="num2"><br> 
+Число 3: <input type="text" size=5 name="num3"><br>
+Число 4: <input type="text" size=5 name="num4"><br>
+Число 5: <input type="text" size=5 name="num5"><br>
+Максимальне значення = <input type="text" size=8 name="res"><br>
+<input type="button" value="Визначити" onclick="NumOfMaxVal(form1)"><br>
+<input type="reset">
+</FORM>
+<FORM name="form2">
+Перша сторона: <input type="text" size=5 name="side1"><br>
+Друга сторона: <input type="text" size=5 name="side2"><br>
+Третя сторона: <input type="text" size=5 name="side3"><br>
+Побудувати трикутник із заданими сторонами: <input type="text" size=25 name="res1"><br>
+<input type="button" value="Визначити" onclick="triangle(form2)"><br>
+<input type="reset">
+</FORM>
+<FORM name="form3">
+Координата х: <input type="text" size=5 name="x"><br>
+Координата у: <input type="text" size=5 name="y"><br>
+Точка знаходиться у: <input type="text" size=25 name="res2"><br>
+<input type="button" value="Визначити" onclick="belonging(form3)"><br>
+<input type="reset">
+</FORM>
+</BODY>
+</HTML> 

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="#AAAAAA">
+
+<p id="demo">My girlfriend is Vika Vikas. I love Vika and when i see her, i get pleasure. I also love my mom and brother. I am 100% sure, that Vika and I will be together</p>
+<button onclick="myFunction()">Try it</button>
+<script>
+    function myFunction() {
+        var str = document.getElementById("demo").innerHTML;
+        var res = str.replace(/\bVika\b/g, "Tanya");
+        document.getElementById("demo").innerHTML = res;
+    }
+</script>
+
+</body>
+</html>

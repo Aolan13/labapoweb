@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <SCRIPT>
+        let items = [
+          'pch1.jpg',
+            'pch2.jpg',
+            'pch3.jpg',
+            'wpch1.jpg',
+            'wpch2.jpg',
+            'wpch3.jpg'
+        ]
+        let currentItem = 0
+        let interval
+
+        function printItem(item) {
+            document.getElementById("result").innerHTML = item;
+        document.getElementById("result").innerHTML = `<img src="${item}" width="200" height="200" alt="123"/>`;
+        }
+
+        function start(){
+            interval = setInterval(() => {
+                if (currentItem === items.length - 1) {
+                    currentItem = 0
+                } else {
+                    currentItem++
+                }
+
+                printItem(items[currentItem])
+            }, 100)
+        }
+        //-->
+    </SCRIPT>
+</HEAD>
+<BODY bgcolor="#AAAAAA" onLoad="initialize()">
+<input id='startButton' type="button" name="But" value="Почати" onClick="start()">
+<br />
+<br />
+<div id="result" />
+</BODY>
+</HTML>

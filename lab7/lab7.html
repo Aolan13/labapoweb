@@ -1,0 +1,104 @@
+<DOCTYPE HTML>
+	<html>
+	<meta charset="UTF-8">
+	<title>Lab7</title>
+	<script type="text/javascript">
+		function ChangeColor(o)
+		{
+			let i = parseInt(o.indexrow.value)-1
+			let j = parseInt(o.indexcal.value)-1
+
+			if(o.color.value == "green")
+				document.getElementById("tb").rows[i].cells[j].style.backgroundColor = "green"
+			else if(o.color.value == "red")
+				document.getElementById("tb").rows[i].cells[j].style.backgroundColor = "red"
+			else if(o.color.value == "blue")
+				document.getElementById("tb").rows[i].cells[j].style.backgroundColor = "blue"
+			else 
+				document.getElementById("tb").rows[i].cells[j].style.backgroundColor = o.ucolor.value
+		}
+
+		function ChangeImg(o)
+		{
+			let i = parseInt(o.indexrow.value)-1
+			let j = parseInt(o.indexcal.value)-1
+
+				if(o.color1.value == 'cat')
+					document.getElementById("tb").rows[i].cells[j].style.backgroundImage = 'url(cat.jpg)'
+				else if(o.color1.value == 'dog')
+					document.getElementById("tb").rows[i].cells[j].style.backgroundImage = 'url(dog.jpg)'
+		}
+ 		var s="" 
+ 		var sum=0
+ 		var count = 0
+ 		function gr(obj,m)
+ 		{
+ 			var r=15*(Number(((obj.elements[0])[m]).value)+1)
+ 			s+=((obj.elements[0])[m]).text+"\r\n"
+ 			obj.restext.value=s
+ 			sum+=r
+ 			obj.res.value=r
+ 			count++
+		} 
+	</script>
+	<body bgcolor="#AAAAAA">
+		<h3>Change color in table</h3>
+
+		<form name="f1">
+			<table border="1" id='tb' width="400px" height="400px">
+				<tr>
+					<td>Cat</td>
+					<td>Dog</td>
+					<td>Pig</td>
+				</tr>
+				<tr>
+					<td>Hi</td>
+					<td>Hello</td>
+					<td>Hey</td>
+				</tr>
+			</table><br>
+			Enter row <input type="number" name="indexrow" max="2"><br>
+			Enter collumns <input type="number" name="indexcal" max="3"><br>
+			<p>Choose a color</p>
+			<select name="color" size=1 onchange="ChangeColor(f1)">
+ 				<option value='red'>Red
+ 				<option value='green'>Green
+ 				<option value='blue'>Blue
+ 			</select><br>
+ 			Enter a color <input type="text" name="ucolor"><br>
+ 			<input type="button" value="Get Result" onclick="ChangeColor(f1)"><br>
+
+			<select name="color1" size="1" onchange="ChangeImg(f1)">
+				<option value="cat">Cat
+				<option value="dog">Dog
+			</select>
+		</form>
+		<hr>
+
+		<h3>Buy list</h3>
+
+		<FORM name="form1">
+ 			<h3>Анкета</h3>
+ 			<TABLE border=3>
+ 			<TR><TH>List</TH><TH>Result</TH></TR>
+ 			<TR>
+ 			<TD valign=top>
+ 			<select name="data" size=1 onChange="gr(form1,form1.data.value)">
+ 			<option value=0>carrot
+ 			<option value=1>banana
+ 			<option value=2>candy
+ 			<option value=3>meet
+ 			</select><P>
+ 			<input type="text" name="res" size=15 readonly>
+ 			</TD>
+ 			<TD><TEXTAREA name="restext" cols=15 rows=6 readonly>
+ 			</TEXTAREA><P>
+ 			<input type="button" value="Сума" onClick="form1.resgr.value=sum; form1.Count.value=count"><br>
+ 			Sum <input type="text" name="resgr" size=7 readonly><br> 
+ 			Count elem <input type="text" name="Count" size=2 readonly><br>
+ 			<input type="reset" value="Скасувати" onClick="sum=0; s=''">
+ 			</TD></TR></TABLE><p>
+ 			<input type="reset" value="Скасувати" onClick="sum=0; s='' count=0">
+		</FORM> 
+	</body>
+	</html>

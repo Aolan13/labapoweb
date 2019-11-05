@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8">
+<TITLE>Зображення і обтікання текстом</TITLE> 
+<script>
+function chpict(obj){
+	var x = document.getElementById("sex").selectedIndex;
+ 	var x1 = document.getElementById("sex").options;
+	var y = document.getElementById("family").selectedIndex;
+	var y1 = document.getElementById("family").options;
+	var age1=document.getElementById("age").value;
+	document.getElementById("demo").innerHTML = "Анкета:"
+	document.getElementById("demo1").innerHTML = "Стать: " + x1[x].text;
+	document.getElementById("demo2").innerHTML = " Вік: "+age1;
+	document.getElementById("demo3").innerHTML = " Сімейне положення: "+ y1[y].text;
+}
+</script>
+</HEAD>
+<BODY bgcolor="#AAAAAA">
+<FORM name="form1">
+<H1>Оберіть значення параметрів</H1>
+<p>Стать:
+<select id="sex">
+  <option value="man">Чоловіча</option>
+  <option value="woman">Жіноча</option>
+  <option value="hidden">Не знаю</option>
+</select>
+</p> 
+<p>Вік: <input type="text" id="age" size=8 name="num3"></p>
+<p>Сімейне положення:
+<select id="family">
+  <option value="married">Одружений(а)</option>
+  <option value="free">Вільний(а)</option>
+  <option value="almmarried">Заручений(а)</option>
+   <option value="dating">Зустрічаюся</option>
+</select>
+</p> 
+<PRE>
+<input type="button" value= "Переглянути" onclick="chpict(form1)"> 
+<h2 id="demo"></h2>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+</FORM>
+</div>
+	</BODY> 
+	</HTML>

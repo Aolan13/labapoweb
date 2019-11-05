@@ -25,6 +25,8 @@
         "no-array-constructor": "off",
         "no-mixed-spaces-and-tabs": "off",
         "camelcase": "off",
-        "no-mixed-operators": "off"
+        "no-mixed-operators": "off",
+        "semi": "off",
+        "space-before-function-paren":"off"
     }
 }

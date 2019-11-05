@@ -1,0 +1,39 @@
+{
+  "name": "labapoweb",
+  "version": "1.0.0",
+  "description": "WebLabs",
+  "main": "index.html",
+  "scripts": {
+    "start": "",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint --ignore-path .gitignore .",
+    "deploy": "npx firebase deploy --token $FIREBASE_TOKEN"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aolan13/labapoweb"
+  },
+  "author": "Aolan13",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aolan13/labapoweb/issues"
+  },
+  "homepage": "https://labaweb-9d938.firebaseapp.com",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint -- --fix && npx prettier script.js --write"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "firebase-tools": "^7.6.1",
+    "husky": "^3.0.9",
+    "lint": "^0.7.0",
+    "prettier": "^1.18.2"
+  }
+}
